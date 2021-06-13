@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/categoryListFragment">
+    <fragment
+        android:id="@+id/categoryListFragment"
+        android:name="br.com.suellencolangelo.todolist.view.categoryList.CategoryListFragment"
+        android:label="CategoryListFragment">
+        <action
+            android:id="@+id/action_categoryListFragment_to_categoryDetailsFragment2"
+            app:destination="@id/categoryDetailsFragment">
+            <argument
+                android:name="categoryId"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/categoryDetailsFragment"
+        android:name="br.com.suellencolangelo.todolist.view.categoryDetails.CategoryDetailsFragment"
+        android:label="CategoryDetailsFragment">
+        <action
+            android:id="@+id/action_categoryDetailsFragment_to_todoListFragment"
+            app:destination="@id/todoListFragment">
+            <argument
+                android:name="categoryId"
+                app:argType="string" />
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/todoListFragment"
+        android:name="br.com.suellencolangelo.todolist.view.todoList.TodoListFragment"
+        android:label="TodoListFragment">
+        <action
+            android:id="@+id/action_todoListFragment_to_todoDetailsFragment"
+            app:destination="@id/todoDetailsFragment">
+            <argument
+                android:name="todoItemId"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/todoDetailsFragment"
+        android:name="br.com.suellencolangelo.todolist.view.todoDetails.TodoDetailsFragment"
+        android:label="TodoDetailsFragment">
+        <argument
+            android:name="todoItemId"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -8,7 +8,7 @@
         android:name="br.com.suellencolangelo.todolist.view.categoryList.CategoryListFragment"
         android:label="CategoryListFragment">
         <action
-            android:id="@+id/action_categoryListFragment_to_categoryDetailsFragment2"
+            android:id="@+id/to_categoryDetailsFragment"
             app:destination="@id/categoryDetailsFragment">
             <argument
                 android:name="categoryId"
@@ -33,7 +33,7 @@
         android:name="br.com.suellencolangelo.todolist.view.todoList.TodoListFragment"
         android:label="TodoListFragment">
         <action
-            android:id="@+id/action_todoListFragment_to_todoDetailsFragment"
+            android:id="@+id/to_todoDetailsFragment"
             app:destination="@id/todoDetailsFragment">
             <argument
                 android:name="todoItemId"

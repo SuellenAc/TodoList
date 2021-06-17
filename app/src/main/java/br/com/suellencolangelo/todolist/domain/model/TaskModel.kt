@@ -1,16 +1,16 @@
-package br.com.suellencolangelo.todolist.domain
+package br.com.suellencolangelo.todolist.domain.model
 
-data class ItemModel(
+data class TaskModel(
     val id: String,
     val title: String,
     val description: String,
     val imageUrls: List<String>,
     val links: List<String>,
-    val subItems: List<SubItemModel>,
+    val subTasks: List<SubTaskModel>,
     val isCompleted: Boolean,
     val isArchived: Boolean,
     val category: CategoryModel,
 ) {
     val isAllSubItemsCompleted: Boolean
-        get() = subItems.count { it.isCompleted } == subItems.size
+        get() = subTasks.count { it.isCompleted } == subTasks.size
 }

@@ -1,8 +1,8 @@
 package br.com.suellencolangelo.todolist.domain.factory
 
-import br.com.suellencolangelo.todolist.domain.CategoryModel
-import br.com.suellencolangelo.todolist.domain.ItemModel
-import br.com.suellencolangelo.todolist.domain.SubItemModel
+import br.com.suellencolangelo.todolist.domain.model.CategoryModel
+import br.com.suellencolangelo.todolist.domain.model.SubTaskModel
+import br.com.suellencolangelo.todolist.domain.model.TaskModel
 
 object ItemDomainFactory {
     fun makeItem(
@@ -11,17 +11,17 @@ object ItemDomainFactory {
         description: String = "description",
         imageUrls: List<String> = listOf(),
         links: List<String> = listOf(),
-        subItems: List<SubItemModel> = makeSubItems(),
+        subTasks: List<SubTaskModel> = makeSubItems(),
         isCompleted: Boolean = false,
         isArchived: Boolean = false,
         category: CategoryModel = makeCategory()
-    ) = ItemModel(
+    ) = TaskModel(
         id = id,
         title = title,
         description = description,
         imageUrls = imageUrls,
         links = links,
-        subItems = subItems,
+        subTasks = subTasks,
         isCompleted = isCompleted,
         isArchived = isArchived,
         category = category
@@ -39,14 +39,14 @@ object ItemDomainFactory {
         color = color,
     )
 
-    fun makeSubItems(): List<SubItemModel> = listOf(makeSubItem())
+    fun makeSubItems(): List<SubTaskModel> = listOf(makeSubItem())
 
     fun makeSubItem(
         id: String = "id",
         title: String = "title",
         description: String = "description",
         isCompleted: Boolean = false,
-    ) = SubItemModel(
+    ) = SubTaskModel(
         id = id,
         title = title,
         description = description,

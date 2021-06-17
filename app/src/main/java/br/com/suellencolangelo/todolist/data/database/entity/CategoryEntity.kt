@@ -1,6 +1,6 @@
-package br.com.suellencolangelo.todolist.domain
+package br.com.suellencolangelo.todolist.data.database.entity
 
-data class CategoryModel(
+data class CategoryEntity(
     val id: String,
     val title: String,
     val description: String,

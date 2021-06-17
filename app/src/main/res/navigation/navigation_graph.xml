@@ -20,8 +20,8 @@
         android:name="br.com.suellencolangelo.todolist.view.categoryDetails.CategoryDetailsFragment"
         android:label="CategoryDetailsFragment">
         <action
-            android:id="@+id/action_categoryDetailsFragment_to_todoListFragment"
-            app:destination="@id/todoListFragment">
+            android:id="@+id/action_categoryDetailsFragment_to_taskListFragment"
+            app:destination="@id/taskListFragment">
             <argument
                 android:name="categoryId"
                 app:argType="string" />
@@ -29,23 +29,23 @@
 
     </fragment>
     <fragment
-        android:id="@+id/todoListFragment"
-        android:name="br.com.suellencolangelo.todolist.view.todoList.TodoListFragment"
-        android:label="TodoListFragment">
+        android:id="@+id/taskListFragment"
+        android:name="br.com.suellencolangelo.todolist.view.taskList.TaskListFragment"
+        android:label="taskListFragment">
         <action
-            android:id="@+id/to_todoDetailsFragment"
-            app:destination="@id/todoDetailsFragment">
+            android:id="@+id/to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment">
             <argument
-                android:name="todoItemId"
+                android:name="taskItemId"
                 app:argType="string" />
         </action>
     </fragment>
     <fragment
-        android:id="@+id/todoDetailsFragment"
-        android:name="br.com.suellencolangelo.todolist.view.todoDetails.TodoDetailsFragment"
-        android:label="TodoDetailsFragment">
+        android:id="@+id/taskDetailsFragment"
+        android:name="br.com.suellencolangelo.todolist.view.taskDetails.TaskDetailsFragment"
+        android:label="taskDetailsFragment">
         <argument
-            android:name="todoItemId"
+            android:name="taskItemId"
             app:argType="string" />
     </fragment>
 </navigation>

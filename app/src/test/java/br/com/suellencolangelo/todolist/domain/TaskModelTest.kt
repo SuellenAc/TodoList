@@ -7,11 +7,11 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 
-class ItemModelTest {
+class TaskModelTest {
     @Test
     fun isAllSubItemsCompleted_allItemsCompleted_returnTrue() {
         val item = makeItem(
-            subItems = listOf(makeSubItem(isCompleted = true), makeSubItem(isCompleted = true))
+            subTasks = listOf(makeSubItem(isCompleted = true), makeSubItem(isCompleted = true))
         )
 
         val actual = item.isAllSubItemsCompleted
@@ -22,7 +22,7 @@ class ItemModelTest {
     @Test
     fun isAllSubItemsCompleted_notAllItemsCompleted_returnFalse() {
         val item = makeItem(
-            subItems = listOf(makeSubItem(isCompleted = true), makeSubItem(isCompleted = false))
+            subTasks = listOf(makeSubItem(isCompleted = true), makeSubItem(isCompleted = false))
         )
 
         val actual = item.isAllSubItemsCompleted

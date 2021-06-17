@@ -1,6 +1,6 @@
-package br.com.suellencolangelo.todolist.domain
+package br.com.suellencolangelo.todolist.data.database.entity
 
-data class SubItemModel(
+data class SubTaskEntity(
     val id: String,
     val title: String,
     val description: String,

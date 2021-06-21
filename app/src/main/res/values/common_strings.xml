@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_error_title">Error</string>
+    <string name="common_error_description">An error has occurred!</string>
+    <string name="common_error_try_again">Try Again</string>
+</resources>

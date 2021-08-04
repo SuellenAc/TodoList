@@ -2,32 +2,32 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/categoryListFragment">
-    <fragment
-        android:id="@+id/categoryListFragment"
-        android:name="br.com.suellencolangelo.todolist.view.categoryList.CategoryListFragment"
-        android:label="CategoryListFragment">
-        <action
-            android:id="@+id/to_categoryDetailsFragment"
-            app:destination="@id/categoryDetailsFragment">
-            <argument
-                android:name="categoryId"
-                app:argType="string" />
-        </action>
-    </fragment>
-    <fragment
-        android:id="@+id/categoryDetailsFragment"
-        android:name="br.com.suellencolangelo.todolist.view.categoryDetails.CategoryDetailsFragment"
-        android:label="CategoryDetailsFragment">
-        <action
-            android:id="@+id/action_categoryDetailsFragment_to_taskListFragment"
-            app:destination="@id/taskListFragment">
-            <argument
-                android:name="categoryId"
-                app:argType="string" />
-        </action>
+    app:startDestination="@id/taskListFragment">
+<!--    <fragment-->
+<!--        android:id="@+id/categoryListFragment"-->
+<!--        android:name="br.com.suellencolangelo.todolist.view.categoryList.CategoryListFragment"-->
+<!--        android:label="CategoryListFragment">-->
+<!--        <action-->
+<!--            android:id="@+id/to_categoryDetailsFragment"-->
+<!--            app:destination="@id/categoryDetailsFragment">-->
+<!--            <argument-->
+<!--                android:name="categoryId"-->
+<!--                app:argType="string" />-->
+<!--        </action>-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/categoryDetailsFragment"-->
+<!--        android:name="br.com.suellencolangelo.todolist.view.categoryDetails.CategoryDetailsFragment"-->
+<!--        android:label="CategoryDetailsFragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_categoryDetailsFragment_to_taskListFragment"-->
+<!--            app:destination="@id/taskListFragment">-->
+<!--            <argument-->
+<!--                android:name="categoryId"-->
+<!--                app:argType="string" />-->
+<!--        </action>-->
 
-    </fragment>
+<!--    </fragment>-->
     <fragment
         android:id="@+id/taskListFragment"
         android:name="br.com.suellencolangelo.todolist.view.taskList.TaskListFragment"

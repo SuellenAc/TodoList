@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Todolist</string>
+    <string name="drawer_content_description">Drawer Menu</string>
 </resources>
